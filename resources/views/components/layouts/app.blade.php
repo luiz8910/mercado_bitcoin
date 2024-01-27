@@ -11,6 +11,9 @@
         <!-- Theme style -->
         <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
 
+        <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/select2-bootstrap4.min.css') }}">
+
     </head>
     
     <body class="hold-transition sidebar-mini">
@@ -836,7 +839,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Blank Page</h1>
+                    
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -900,5 +903,14 @@
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('js/theme.js') }}"></script>
+
+<script src="{{ asset('js/select2.full.min.js') }}"></script>
+
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+        });
+    </script>
     </body>
 </html>
