@@ -11991,7 +11991,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     z-index: 1034;
 }
 .main-header .nav-link {
-    height: 2.5rem;
+    /* height: 2.5rem; */
     position: relative;
 }
 .main-header.text-sm .nav-link,

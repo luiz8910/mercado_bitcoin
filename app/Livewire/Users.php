@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Country;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\Attributes\Title;
 
@@ -21,10 +22,9 @@ class Users extends Component
     public $education;
     public $notes;
 
-
     public function mount()
     {
-        $this->id = 1;
+        $this->id = Auth::user()->id;
 
         $this->user = User::find($this->id);
 
