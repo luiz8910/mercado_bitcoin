@@ -52,7 +52,7 @@ class Users extends Component
                 "notes" => $this->notes,
             ]);
 
-        return redirect()->to('/');
+        return redirect()->to('/profile');
     }
 
     #[Title('Profile')]
