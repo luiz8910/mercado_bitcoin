@@ -39,7 +39,7 @@
 
                 <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
 
-                <p class="text-muted">{{ $user->country->name }}</p>
+                <p class="text-muted">{{ $user->country->name ?? "No country provided" }}</p>
 
                 <hr>
 
@@ -51,14 +51,14 @@
                   <span class="tag tag-info">Javascript</span>
                   <span class="tag tag-warning">PHP</span>
                   <span class="tag tag-primary">Node.js</span> -->
-                  <span class="tag tag-success">{{ $user->skills }}</span>
+                  <span class="tag tag-success">{{ $user->skills ?? "No skills provided" }}</span>
                 </p>
 
                 <hr>
 
                 <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
 
-                <p class="text-muted">{{ $user->notes }}</p>
+                <p class="text-muted">{{ $user->notes ?? "No notes provided" }}</p>
               </div>
               <!-- /.card-body -->
             </div>

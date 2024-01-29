@@ -30,11 +30,11 @@ class Users extends Component
 
         $this->name = $this->user->name;
         $this->email = $this->user->email;
-        $this->skills = $this->user->skills;
-        $this->country_id = $this->user->country_id;
-        $this->jobTitle = $this->user->jobTitle;
-        $this->education = $this->user->education;
-        $this->notes = $this->user->notes;
+        $this->skills = $this->user->skills ?? "";
+        $this->country_id = $this->user->country_id ?? null;
+        $this->jobTitle = $this->user->jobTitle ?? "";
+        $this->education = $this->user->education ?? "";
+        $this->notes = $this->user->notes ?? "";
 
         $this->countries = Country::all();
     }
