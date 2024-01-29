@@ -2,3 +2,9 @@
     color: red;
     font-weight: 500;
 }
+
+@media (max-width: 1010px) {
+    .custom-margin {
+        margin-left: -200px;
+    }
+}

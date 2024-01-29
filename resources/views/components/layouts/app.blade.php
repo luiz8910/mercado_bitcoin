@@ -48,10 +48,10 @@
             <ul class="navbar-nav ml-auto">
             <!-- Navbar Search -->
             <li class="nav-item">
-                <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                <a class="nav-link" data-widget="navbar-search" onclick="redirect()" href="#" role="button">
                 <i class="fas fa-search"></i>
                 </a>
-                <div class="navbar-search-block">
+                <!-- <div class="navbar-search-block">
                 <form class="form-inline">
                     <div class="input-group input-group-sm">
                     <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -65,7 +65,7 @@
                     </div>
                     </div>
                 </form>
-                </div>
+                </div> -->
             </li>
             </ul>
         </nav>
@@ -754,7 +754,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Blank Page</li>
+                    <li class="breadcrumb-item active">{{ $title ?? "Page"}}</li>
                     </ol>
                 </div>
                 </div>
@@ -763,13 +763,13 @@
 
             <!-- Main content -->
             <section class="content">
-             
+             {{ $slot }}
             <!-- Default box -->
-            <div class="card">
+            <!--<div class="card">
                 <div class="card-header">
                 <h3 class="card-title"></h3>
-
-                <div class="card-tools">
+                
+                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
                     </button>
@@ -779,14 +779,14 @@
                 </div>
                 </div>
                 <div class="card-body">
-                {{ $slot }}
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
                 
                 </div>
-                <!-- /.card-footer-->
-            </div>
+                
+                <div class="card-footer">
+                
+                </div>  
+                
+            </div> -->
             <!-- /.card -->
 
             </section>
@@ -829,6 +829,10 @@
                 $("#btn-logout").trigger('click');
             });
         });
+
+        function redirect(){
+            window.location.href = "/search";
+        }
     </script>
     </body>
 </html>

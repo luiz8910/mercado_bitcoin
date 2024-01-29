@@ -2,6 +2,7 @@
 
 use App\Livewire\Users;
 use App\Livewire\Dashboard;
+use App\Livewire\Search;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
@@ -21,6 +22,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', Dashboard::class)->name('dashboard');
 
     Route::get('/profile', Users::class);
+
+    Route::get('/search', Search::class);
 });
 
 
